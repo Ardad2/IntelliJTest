@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse360.controllers.PatientController">
+    <tabs>
+        <Tab closable="false" text="Visits">
+            <content>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox layoutX="14.0" layoutY="56.0" prefWidth="150.0" promptText="Dates Visited...">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Date 1" />
+                                    <String fx:value="Date 2" />
+                                    <!-- hi -->
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <TextArea editable="false" layoutX="217.0" layoutY="56.0" prefHeight="300.0" prefWidth="350.0" text="Visit: Sept 5, 2021&#10;&#10;Doctor: Dr. Bhavsar&#10;&#10;Nurse: Ms. Patel&#10;&#10;Vitals(Weight, height, body temp, blood pressure)&#10;&#10;Visit Summary: Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah&#10;&#10;Medication: Advil&#10;&#10;&#10;&#10;&#10;&#10;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextArea>
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                    </children>
+                </Pane>
+            </content></Tab>
+        <Tab closable="false" text="Messages">
+            <content>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <RadioButton layoutX="29.0" layoutY="29.0" mnemonicParsing="false" selected="true" text="Doctor 1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="selection" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton layoutX="147.0" layoutY="29.0" mnemonicParsing="false" text="Nurse 1" toggleGroup="$selection" />
+                        <RadioButton layoutX="264.0" layoutY="29.0" mnemonicParsing="false" text="Nurse  2" toggleGroup="$selection" />
+                        <TextArea editable="false" layoutX="18.0" layoutY="84.0" prefHeight="150.0" prefWidth="565.0" text="Me: Hey Doctor I have a rash on my hand and it hurts. Help!&#10;&#10;Doctor 1: Don't worry about it!" />
+                        <TextField layoutX="18.0" layoutY="275.0" prefWidth="400.0" />
+                        <Button layoutX="444.0" layoutY="275.0" mnemonicParsing="false" text="Send" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                    </children></Pane>
+            </content></Tab>
+        <Tab closable="false" text="Profile">
+            <content>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="145.0" layoutY="43.0" text="First name:" />
+                        <Label layoutX="145.0" layoutY="73.0" text="Last name:" />
+                        <Label layoutX="145.0" layoutY="103.0" text="Birthday (MM/DD/YYYY):" />
+                        <Label layoutX="145.0" layoutY="211.0" text="Email :" />
+                        <Label layoutX="145.0" layoutY="241.0" text="Phone Number (Editable):" />
+                        <TextField editable="false" layoutX="294.0" layoutY="38.0" prefHeight="27.0" prefWidth="160.0" text="Krish" />
+                        <TextField editable="false" layoutX="294.0" layoutY="68.0" text="Patel" />
+                        <TextField editable="false" layoutX="294.0" layoutY="98.0" text="11/05/2002" />
+                        <TextField editable="false" layoutX="294.0" layoutY="209.0" text="kpatel67@asu.edu" />
+                        <TextField layoutX="294.0" layoutY="238.0" text="XXX-XXX-XXXX" />
+                        <Button layoutX="357.0" layoutY="289.0" mnemonicParsing="false" text="Save Changes" />
+                        <Label layoutX="145.0" layoutY="160.0" text="Insurance:" />
+                        <TextField editable="false" layoutX="294.0" layoutY="155.0" text="Cigna" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                        <TextField editable="false" layoutX="294.0" layoutY="125.0" text="18" />
+                        <Label layoutX="144.0" layoutY="130.0" text="Age:" />
+                        <Label layoutX="145.0" layoutY="184.0" text="Pharmacy:" />
+                        <TextField editable="false" layoutX="294.0" layoutY="179.0" text="Walgreens" />
+                        <Button layoutX="218.0" layoutY="289.0" mnemonicParsing="false" text="Immunization Record" />
+                    </children></Pane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse360.controllers.NurseController">
+    <tabs>
+        <Tab text="Patient Profile">
+            <content>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox layoutX="33.0" layoutY="73.0" prefWidth="150.0" promptText="Existing Patients" />
+                        <Label layoutX="231.0" layoutY="71.0" text="First Name:" />
+                        <Label layoutX="231.0" layoutY="99.0" text="Last Name:" />
+                        <Label layoutX="231.0" layoutY="129.0" text="Birthday (MM/DD/YYYY):" />
+                        <Label layoutX="231.0" layoutY="192.0" text="Insurance (Editable):" />
+                        <Label layoutX="231.0" layoutY="250.0" text="Email:" />
+                        <Label layoutX="231.0" layoutY="277.0" text="Phone Number (Editable):" />
+                        <TextField editable="false" layoutX="425.0" layoutY="66.0" />
+                        <TextField editable="false" layoutX="425.0" layoutY="94.0" />
+                        <TextField editable="false" layoutX="425.0" layoutY="124.0" />
+                        <TextField layoutX="425.0" layoutY="187.0" />
+                        <TextField editable="false" layoutX="425.0" layoutY="245.0" />
+                        <TextField layoutX="425.0" layoutY="273.0" />
+                        <Button layoutX="490.0" layoutY="308.0" mnemonicParsing="false" text="Create Patient" />
+                        <ComboBox layoutX="33.0" layoutY="37.0" prefWidth="150.0" promptText="DOB" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                        <Button layoutX="398.0" layoutY="308.0" mnemonicParsing="false" text="Edit Patient" />
+                        <TextField editable="false" layoutX="425.0" layoutY="157.0" />
+                        <Label layoutX="231.0" layoutY="159.0" text="Age :" />
+                        <TextField layoutX="425.0" layoutY="216.0" />
+                        <Label layoutX="231.0" layoutY="221.0" text="Pharmacy (Editable):" />
+                        <Button layoutX="33.0" layoutY="108.0" mnemonicParsing="false" text="Immunization Record" />
+                    </children>
+                </Pane>
+            </content></Tab>
+        <Tab text="Visits">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox layoutX="33.0" layoutY="37.0" prefWidth="150.0" promptText="DOB" />
+                        <ComboBox layoutX="33.0" layoutY="73.0" prefWidth="150.0" promptText="Existing Patients" />
+                        <ComboBox layoutX="33.0" layoutY="109.0" prefWidth="150.0" promptText="Date" />
+                        <Label layoutX="231.0" layoutY="71.0" text="Height (in) :" />
+                        <Label layoutX="231.0" layoutY="99.0" text="Weight (lb) :" />
+                        <Label layoutX="231.0" layoutY="129.0" text="Blood Pressure (only if over 12) :" />
+                        <TextField layoutX="425.0" layoutY="66.0" />
+                        <TextField layoutX="425.0" layoutY="94.0" />
+                        <TextField layoutX="425.0" layoutY="123.0" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                        <TextArea layoutX="386.0" layoutY="180.0" prefHeight="100.0" prefWidth="200.0" />
+                        <Label layoutX="232.0" layoutY="180.0" text="Additional Comments  :" />
+                        <Button layoutX="486.0" layoutY="286.0" mnemonicParsing="false" text="Save Changes" />
+                        <TextField layoutX="425.0" layoutY="150.0" />
+                        <Label layoutX="231.0" layoutY="155.0" text="Body temperature (F) : " />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Messages">
+            <content>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox layoutX="14.0" layoutY="24.0" prefWidth="150.0" promptText="DOB" />
+                        <TextArea layoutX="18.0" layoutY="84.0" prefHeight="150.0" prefWidth="565.0" text="Me: Hey Doctor I have a rash on my hand and it hurts. Help!&#10;&#10;Doctor 1: Don't worry about it!" />
+                        <TextField layoutX="18.0" layoutY="275.0" prefWidth="400.0" />
+                        <Button layoutX="444.0" layoutY="275.0" mnemonicParsing="false" text="Send" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                        <ComboBox layoutX="187.0" layoutY="24.0" prefWidth="150.0" promptText="Patient's Name" />
+                    </children></Pane>
+            </content></Tab>
+        <Tab text="Profile">
+            <content>
+
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="145.0" layoutY="43.0" text="First Name:" />
+                        <Label layoutX="145.0" layoutY="73.0" text="Last Name:" />
+                        <TextField layoutX="294.0" layoutY="38.0" text="Nurse" />
+                        <TextField layoutX="294.0" layoutY="68.0" text="One" />
+                        <Label layoutX="145.0" layoutY="103.0" text="Birthday (MM/DD/YYYY):" />
+                        <TextField layoutX="294.0" layoutY="98.0" text="6/21/1995" />
+                        <Label layoutX="145.0" layoutY="164.0" text="Email:" />
+                        <TextField layoutX="294.0" layoutY="159.0" text="email@gmail.com" />
+                        <Label layoutX="145.0" layoutY="194.0" text="Phone Number:" />
+                        <TextField layoutX="294.0" layoutY="189.0" text="XXX-XXX-XXXX" />
+                        <Button layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#logOut" text="Log Out" />
+                        <TextField layoutX="294.0" layoutY="129.0" text="26" />
+                        <Label layoutX="145.0" layoutY="134.0" text="Age:" />
+                    </children>
+                </Pane>
+
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
